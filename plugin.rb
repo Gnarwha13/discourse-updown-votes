@@ -4,7 +4,7 @@
 # about: Adds up/downvoting to topics and posts with score tracking
 # version: 1.0.0
 # authors: Custom
-# url: https://github.com/example/discourse-updown-votes
+# url: https://github.com/your-org/discourse-updown-votes
 
 enabled_site_setting :updown_votes_enabled
 
@@ -16,9 +16,6 @@ after_initialize do
 
   # Controllers
   require_relative "app/controllers/updown_votes_controller"
-
-  # Serializers
-  require_relative "app/serializers/updown_vote_serializer"
 
   # Add routes
   Discourse::Application.routes.append do
