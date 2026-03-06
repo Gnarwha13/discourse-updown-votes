@@ -32,6 +32,12 @@ export default class UpdownVoteButtons extends Component {
   }
 
   @action
+  stopPropagation(e) {
+    e.stopPropagation();
+    e.preventDefault();
+  }
+
+  @action
   async vote(direction) {
     if (!this.canVote || this.loading) return;
     this.loading = true;
