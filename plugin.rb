@@ -45,9 +45,3 @@ after_initialize do
     vote = UpdownVote.find_by(votable_type: "Post", votable_id: object.id, user_id: scope.current_user.id)
     vote&.direction
   end
-
-  # Extend BasicUser serializer to add total vote score
-  add_to_serializer(:basic_user, :vote_score) do
-    UpdownVote.score_for_user(object.id)
-  end
-end
