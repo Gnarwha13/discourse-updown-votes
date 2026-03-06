@@ -1,4 +1,4 @@
-<div class="updown-vote-buttons {{if this.loading 'loading'}}">
+<div class="updown-vote-buttons {{if this.loading 'loading'}}" {{on "click" this.stopPropagation}}>
   <button
     class="vote-btn vote-up {{if this.upActive 'active'}}"
     title="Upvote"
