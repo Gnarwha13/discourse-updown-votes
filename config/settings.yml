@@ -1,0 +1,12 @@
+plugins:
+  updown_votes_enabled:
+    default: true
+    client: true
+  updown_votes_anonymous_view:
+    default: true
+    client: true
+  updown_votes_require_trust_level:
+    default: 0
+    type: integer
+    min: 0
+    max: 4

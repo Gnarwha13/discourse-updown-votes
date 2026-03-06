@@ -1,0 +1,6 @@
+en:
+  updown_votes:
+    trust_level_required: "You need trust level %{level} or above to vote."
+    upvote: "Upvote"
+    downvote: "Downvote"
+    score: "Vote Score"

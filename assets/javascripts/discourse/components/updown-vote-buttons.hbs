@@ -1,0 +1,23 @@
+<div class="updown-vote-buttons {{if this.loading 'loading'}}">
+  <button
+    class="vote-btn vote-up {{if this.upActive 'active'}}"
+    title="Upvote"
+    disabled={{not this.canVote}}
+    {{on "click" (fn this.vote "up")}}
+  >
+    ▲
+  </button>
+
+  <span class="vote-score {{this.scoreClass}}">
+    {{this.score}}
+  </span>
+
+  <button
+    class="vote-btn vote-down {{if this.downActive 'active'}}"
+    title="Downvote"
+    disabled={{not this.canVote}}
+    {{on "click" (fn this.vote "down")}}
+  >
+    ▼
+  </button>
+</div>

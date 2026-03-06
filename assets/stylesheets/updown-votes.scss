@@ -1,0 +1,76 @@
+// ─── Updown Vote Buttons ──────────────────────────────────────────────────────
+
+.updown-vote-buttons {
+  display:      inline-flex;
+  align-items:  center;
+  gap:          4px;
+  margin-left:  8px;
+  user-select:  none;
+  vertical-align: middle;
+
+  &.loading {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
+
+.vote-btn {
+  display:         inline-flex;
+  align-items:     center;
+  justify-content: center;
+  width:           24px;
+  height:          24px;
+  padding:         0;
+  border:          1px solid var(--primary-low-mid, #ccc);
+  border-radius:   4px;
+  background:      transparent;
+  color:           var(--primary-medium, #666);
+  font-size:       11px;
+  line-height:     1;
+  cursor:          pointer;
+  transition:      background 0.15s, color 0.15s, border-color 0.15s;
+
+  &:hover:not(:disabled) {
+    background:    var(--primary-low, #eee);
+    border-color:  var(--primary-medium, #999);
+  }
+
+  &:disabled {
+    cursor:  not-allowed;
+    opacity: 0.4;
+  }
+
+  &.vote-up.active {
+    background:   var(--success, #27ae60);
+    border-color: var(--success, #27ae60);
+    color:        #fff;
+  }
+
+  &.vote-down.active {
+    background:   var(--danger, #e74c3c);
+    border-color: var(--danger, #e74c3c);
+    color:        #fff;
+  }
+}
+
+.vote-score {
+  min-width:   28px;
+  text-align:  center;
+  font-weight: 700;
+  font-size:   13px;
+  line-height: 1;
+
+  &.positive { color: var(--success, #27ae60); }
+  &.negative { color: var(--danger,  #e74c3c); }
+  &.neutral  { color: var(--primary-medium, #888); }
+}
+
+// ─── Topic list row spacing ───────────────────────────────────────────────────
+.topic-list-item .updown-vote-buttons {
+  margin-left: 10px;
+}
+
+// ─── Post menu row spacing ────────────────────────────────────────────────────
+.post-menu-area .updown-vote-buttons {
+  margin-left: 6px;
+}
