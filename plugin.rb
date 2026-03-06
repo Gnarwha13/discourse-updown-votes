@@ -45,3 +45,4 @@ after_initialize do
     vote = UpdownVote.find_by(votable_type: "Post", votable_id: object.id, user_id: scope.current_user.id)
     vote&.direction
   end
+end
